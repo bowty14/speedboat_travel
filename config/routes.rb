@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'reviews#index'
+ root to: 'homepage#index'
  resources :reviews
+ get '/homepage' => 'homepage#index'
  post 'authenticate', to: 'authentication#authenticate'
 end
